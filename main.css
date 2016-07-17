@@ -1,0 +1,39 @@
+header{
+    background-color: #EFEFEF;
+    padding: 0px 40px;
+    font-family: 'Archivo Narrow';
+    font-size: 24px;
+}
+
+header .row{
+    display:flex;
+    align-items: center;
+}
+
+header #nav-ul{
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+
+header li{
+    padding: 0 30px;
+}
+
+header .resource-dropdown{
+    padding: 0;
+    text-align: center;
+}
+
+header img{
+    height: 80px;
+}
+
+.dropdown-menu{
+    min-width: 100px;
+    left: 30px;
+}
+
+.dropdown-menu > li > a{
+    color: #337ab7;
+}
