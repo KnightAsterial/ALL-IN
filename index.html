@@ -62,7 +62,7 @@
 					<h2>ALL  IN Kits</h2>
 					<p>An innovative educational kit to raise awareness for Alzheimer's Disease and clinical trials</p>
 					<ul class="actions">
-						<li><a href="#" class="button special">Learn More</a></li>
+						<li><a href="#cd-timeline" class="button special">Learn More</a></li>
 						<li><a href="#" class="button">Online Resources</a></li>
 					</ul>
 				</section>
@@ -228,6 +228,23 @@
 
 			<script src="assets/js/modernizr.js"></script>
 			<script src="assets/js/main-vertical-timeline.js"></script>
+
+			<script>
+			$(function() {
+			  $('a[href*="#"]:not([href="#"])').click(function() {
+			    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			      var target = $(this.hash);
+			      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			      if (target.length) {
+			        $('html, body').animate({
+			          scrollTop: target.offset().top
+			        }, 1000);
+			        return false;
+			      }
+			    }
+			  });
+			});
+			</script>
 
 	</body>
 </html>
