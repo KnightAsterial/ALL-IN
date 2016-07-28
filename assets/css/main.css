@@ -4167,3 +4167,18 @@
     transform: translateX(0);
   }
 }
+
+/* index 4split box */
+#index-characteristics-box{
+	padding-top: 1em;
+}
+
+#sponsor-title{
+	text-align: center;
+	border-bottom: solid 2px #646464;
+}
+
+#timeline-title{
+	text-align: center;
+	border-bottom: solid 2px #646464;
+}
