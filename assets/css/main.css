@@ -2360,6 +2360,18 @@
 				background: #e5cb95;
 				color: #ffffff;
 			}
+			.icon.major.accentWord {
+				background: #90b0ba;
+				color: #ffffff;
+				margin: 0;
+				cursor: pointer;
+			}
+			.icon.major.accentPDF {
+				background: #e89980;
+				color: #ffffff;
+				margin: 0;
+				cursor: pointer;
+			}
 
 /* Image */
 
