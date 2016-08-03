@@ -59,7 +59,7 @@
 					<h2>ALL  IN Kits</h2>
 					<p>An innovative educational kit to teach people about Alzheimer's Disease</p>
 					<ul class="actions">
-						<li><a href="#timeline-title" class="button special">Learn More</a></li>
+						<li><a href="#timeline-title" class="button special scroll">Learn More</a></li>
 						<li><a href="#" class="button">Online Resources</a></li>
 					</ul>
 				</section>
@@ -135,7 +135,7 @@
 							<div class="cd-timeline-content">
 								<h2>Day 2 - Neurons</h2>
 								<p>Students take a look inside of a brain by building a marble track.</p>
-								<a href="#0" class="cd-read-more">Read more</a>
+								<a href="resource-archive/day2.html" class="cd-read-more">Read more</a>
 								<span class="cd-date">Day 2</span>
 							</div> <!-- cd-timeline-content -->
 						</div> <!-- cd-timeline-block -->
@@ -148,7 +148,7 @@
 							<div class="cd-timeline-content">
 								<h2>Day 3 - Brain Breakdown</h2>
 								<p>Students delve deeper into the scientific causes of Alzheimer's disease by constucting a ball chute and playing a reinvented form of ever-so popular Tag!</p>
-								<a href="#0" class="cd-read-more">Read more</a>
+								<a href="resource-archive/day3.html" class="cd-read-more">Read more</a>
 								<span class="cd-date">Day 3</span>
 							</div> <!-- cd-timeline-content -->
 						</div> <!-- cd-timeline-block -->
@@ -161,7 +161,7 @@
 							<div class="cd-timeline-content">
 								<h2>Day 4 - The Changing Brain</h2>
 								<p>Students will revisit the activities from Day 1 but with a twist!</p>
-								<a href="resource-archive/day1.html" class="cd-read-more">Read more</a>
+								<a href="resource-archive/day4.html" class="cd-read-more">Read more</a>
 								<span class="cd-date">Day 4</span>
 							</div> <!-- cd-timeline-content -->
 						</div> <!-- cd-timeline-block -->
@@ -174,7 +174,7 @@
 							<div class="cd-timeline-content">
 								<h2>Day 5 - Eliminating Alzheimer's</h2>
 								<p>Students will study the effect of modern medicine on Alzheimer's and learn how to help Al by chaging the way we view clinical trials!</p>
-								<a href="resource-archive/day1.html" class="cd-read-more">Read more</a>
+								<a href="resource-archive/day5.html" class="cd-read-more">Read more</a>
 								<span class="cd-date">Day 5</span>
 							</div> <!-- cd-timeline-content -->
 						</div> <!-- cd-timeline-block -->
@@ -242,13 +242,23 @@
 
 
 			<script>
-			$(document).on('click', 'a', function(event){
-			    event.preventDefault();
-
-			    $('html, body').animate({
-			        scrollTop: $( $.attr(this, 'href') ).offset().top
-			    }, 1250);
-			});
+			var hashTagActive = "";
+		    $(".scroll").on("click touchstart" , function (event) {
+		        if(hashTagActive != this.hash) { //this will prevent if the user click several times the same link to freeze the scroll.
+		            event.preventDefault();
+		            //calculate destination place
+		            var dest = 0;
+		            if ($(this.hash).offset().top > $(document).height() - $(window).height()) {
+		                dest = $(document).height() - $(window).height();
+		            } else {
+		                dest = $(this.hash).offset().top;
+		            }
+		            //go to destination
+		            $('html,body').animate({
+		                scrollTop: dest
+		            }, 2000, 'swing');
+		        }
+		    });
 			</script>
 
 
